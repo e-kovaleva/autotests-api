@@ -1,6 +1,6 @@
 from clients.users.public_users_client import get_public_users_client
 from clients.users.private_users_client import AuthenticationUserSchema
-from tools.fakers import get_random_email
+from tools.fakers import fake
 from clients.files.files_client import get_files_client
 from clients.courses.courses_client import get_courses_client
 from clients.exercises.exercises_client import get_exercises_client
@@ -13,7 +13,7 @@ from clients.exercises.exercises_schema import CreateExerciseRequestSchema
 public_users_client = get_public_users_client()
 
 create_user_request = CreateUsersRequestSchema(
-    email=get_random_email(),
+    email=fake.email(),
     password='string',
     last_name='string',
     first_name='string',
