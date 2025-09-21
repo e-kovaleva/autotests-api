@@ -1,6 +1,5 @@
 from clients.users.public_users_client import get_public_users_client
 from clients.users.private_users_client import AuthenticationUserSchema
-from tools.fakers import fake
 from clients.files.files_client import get_files_client
 from clients.courses.courses_client import get_courses_client
 from clients.users.users_schema import CreateUsersRequestSchema
