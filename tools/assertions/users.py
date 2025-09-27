@@ -28,8 +28,4 @@ def assert_get_user_response(
         get_user_response: GetUserResponseSchema,
         create_user_response: CreateUserResponseSchema
     ):
-    assert_equal(get_user_response.user.id, create_user_response.user.id, 'id')
-    assert_equal(get_user_response.user.email, create_user_response.user.email, 'email')
-    assert_equal(get_user_response.user.last_name, create_user_response.user.last_name, 'last_name')
-    assert_equal(get_user_response.user.first_name, create_user_response.user.first_name, 'first_name')
-    assert_equal(get_user_response.user.middle_name, create_user_response.user.middle_name, 'middle_name')
+    assert_user(get_user_response.user, create_user_response.user)
